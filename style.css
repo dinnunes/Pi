@@ -164,3 +164,82 @@ footer {
     background-color: #f7f5f5;
     color: #111111;
 }
+
+/* Layout Geral do Sobre */
+.sobre-section {
+    padding: 100px 0; /* Espaçamento grande entre seções estilo Apple */
+    border-top: 1px solid #222;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    letter-spacing: -0.02em;
+}
+
+.simple-text {
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+/* Ética em Grid */
+.etica-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.etica-item {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+.etica-item strong {
+    display: block;
+    color: #f7f5f5;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 5px;
+}
+
+/* Lemas */
+.lemas p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.lemas span {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+
+/* Botões Minimalistas */
+.minimal-btn {
+    display: inline-block;
+    color: #f7f5f5;
+    text-decoration: none;
+    border: 1px solid #444;
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    text-transform: lowercase;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.minimal-btn:hover {
+    background: #f7f5f5;
+    color: #111111;
+}
+
+/* Contato */
+.email-box a {
+    color: #f7f5f5;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
