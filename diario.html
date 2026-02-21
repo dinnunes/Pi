@@ -1,43 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Diário — Pitore</title>
-</head>
-<body>
+<script>
+        function filterArticles(manualQuery) {
+            // Se vier um texto por fora (manualQuery), usa ele. Se não, pega o que está no input.
+            let input = manualQuery !== undefined ? manualQuery.toLowerCase() : document.getElementById('diarioSearch').value.toLowerCase();
+            
+            // Se foi uma busca externa, coloca o texto no campo para o usuário ver o que está filtrado
+            if (manualQuery !== undefined) {
+                document.getElementById('diarioSearch').value = manualQuery;
+            }
 
-    <span class="logo">▭</span>
-
-    <nav>
-        <a href="index.html">Lar</a>
-        <a href="butique.html">Butique</a>
-        <a href="sobre.html">Sobre</a>
-    </nav>
-
-    <main>
-        <header class="diario-header">
-            <h1 class="section-title">Diário</h1>
-            <p class="simple-text">Seus artigos amigáveis.</p>
-        </header>
-
-        <div class="search-wrapper">
-            <input type="text" id="diarioSearch" placeholder="Buscar no diário" onkeyup="filterArticles()">
-        </div>
-
-        <ul class="article-list" id="articleList">
-
-        </ul>
-    </main>
-
-    <footer>
-        <p>Pitore © 2026 por Din está licenciado sob CC BY 4.0</p>
-    </footer>
-
-    <script>
-        function filterArticles() {
-            let input = document.getElementById('diarioSearch').value.toLowerCase();
             let items = document.getElementsByClassName('article-item');
 
             for (let i = 0; i < items.length; i++) {
@@ -49,7 +19,14 @@
                 }
             }
         }
-    </script>
 
-</body>
-</html>
+        // NOVIDADE: Este bloco abaixo roda assim que o Diário termina de carregar
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const buscaVindaDeFora = urlParams.get('busca'); // Pega o que o index.html mandou
+            
+            if (buscaVindaDeFora) {
+                filterArticles(buscaVindaDeFora); // Executa o filtro automaticamente
+            }
+        };
+    </script>
