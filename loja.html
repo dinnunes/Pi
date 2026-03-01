@@ -3,9 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Loja — Pitore</title>
     <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        /* BASE E CORES GITHUB DARK */
+        body {
+            background-color: #0d1117;
+            color: #e6edf3;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .logo { font-size: 2rem; display: block; text-align: center; margin-bottom: 30px; }
+
+        nav { text-align: center; margin-bottom: 60px; }
+        nav a { color: #8b949e; text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
+        nav a:hover { color: #fff; }
+
+        h1 { font-size: 1.5rem; text-transform: uppercase; letter-spacing: 2px; border-bottom: 1px solid #30363d; padding-bottom: 10px; }
+        .intro-text { color: #8b949e; font-size: 0.9rem; margin-bottom: 40px; }
+
+        /* ESTRUTURA DA LISTA */
+        .categoria-bloco { margin-bottom: 50px; }
+        
+        /* CORES POR CATEGORIA (Sinergia com os Livros) */
+        .cat-entretenimento { border-left: 3px solid #ff4500; padding-left: 15px; } /* Laranja/Energia */
+        .cat-dinheiro { border-left: 3px solid #2ecc71; padding-left: 15px; }       /* Verde/Crescimento */
+        .cat-saude { border-left: 3px solid #3498db; padding-left: 15px; }          /* Azul/Vitalidade */
+        .cat-filosofia { border-left: 3px solid #9b59b6; padding-left: 15px; }      /* Roxo/Conhecimento */
+        .cat-lingua { border-left: 3px solid #e74c3c; padding-left: 15px; }         /* Vermelho/Expressão */
+        .cat-estilo { border-left: 3px solid #f1c40f; padding-left: 15px; }         /* Dourado/Estética */
+        .cat-amor { border-left: 3px solid #e91e63; padding-left: 15px; }           /* Rosa/Conexão */
+
+        h2 { font-size: 1.1rem; text-transform: uppercase; margin-bottom: 20px; }
+
+        .item-loja {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #21262d;
+        }
+
+        .item-info { display: flex; flex-direction: column; }
+        .item-nome { font-weight: bold; font-size: 1rem; color: #fff; }
+        .item-desc { font-size: 0.8rem; color: #8b949e; }
+
+        .btn-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.8rem;
+            border: 1px solid #30363d;
+            padding: 5px 12px;
+            transition: 0.3s;
+        }
+
+        .btn-link:hover { background-color: #fff; color: #0d1117; }
+
+        footer { margin-top: 80px; text-align: center; color: #484f58; font-size: 0.7rem; }
+    </style>
 </head>
 <body>
 
@@ -15,91 +78,129 @@
         <a href="index.html">Lar</a>
         <a href="butique.html">Butique</a>
         <a href="sobre.html">Sobre</a>
-        <a href="loja.html">Loja</a>
+        <a href="loja.html" style="color: #fff; font-weight: bold;">Loja</a>
     </nav>
 
-    <div class="tagline">Seja a sua melhor versão.</div>
+    <div class="container">
+        <h1>Loja</h1>
+        <p class="intro-text">Curadoria de parcerias, ferramentas e objetos recomendados pela Pitore.</p>
 
-    <div class="loja-grid">
-        
-        <div class="product-card">
-            <div>
-                <span class="liivro-tag" style="color: #FE1818;">Liivro</span>
-                <h2 class="product-title">PiTeni</h2>
-                <p class="product-description">Entretenimento, por gentileza.</p>
-                <p class="product-price">R$ 88</p>
+        <section class="categoria-bloco cat-entretenimento">
+            <h2>Entretenimento</h2>
+            <div class="item-loja">
+                <div class="item-info">
+                    <span class="item-nome">Apple TV / HBO Max</span>
+                    <span class="item-desc">Consumo visual de alta fidelidade.</span>
+                </div>
+                <a href="#" class="btn-link">Acessar ›</a>
             </div>
-            <a href="https://pay.kiwify.com.br/LPKOeCU" class="buy-button">Comprar</a>
-        </div>
+            <div class="item-loja">
+                <div class="item-info">
+                    <span class="item-nome">Kabum / Steam</span>
+                    <span class="item-desc">Hardware e experiências interativas.</span>
+                </div>
+                <a href="#" class="btn-link">Acessar ›</a>
+            </div>
+        </section>
 
-        <div class="product-card">
-            <div>
-                <span class="liivro-tag" style="color: #18FF19;">Liivro</span>
-                <h2 class="product-title">PiDin</h2>
-                <p class="product-description">Dinheirooooo…</p>
-                <p class="product-price">R$ 88</p>
+        <section class="categoria-bloco cat-dinheiro">
+            <h2>Dinheiro</h2>
+            <div class="item-loja">
+                <div class="item-info">
+                    <span class="item-nome">FNO / Fiverr</span>
+                    <span class="item-desc">Estrutura digital e trabalho global.</span>
+                </div>
+                <a href="#" class="btn-link">Acessar ›</a>
             </div>
-            <a href="https://pay.kiwify.com.br/i9cgoaj" class="buy-button">Comprar</a>
-        </div>
+            <div class="item-loja">
+                <div class="item-info">
+                    <span class="item-nome">Banco Inter</span>
+                    <span class="item-desc">Gestão e autonomia financeira.</span>
+                </div>
+                <a href="#" class="btn-link">Acessar ›</a>
+            </div>
+        </section>
 
-        <div class="product-card">
-            <div>
-                <span class="liivro-tag" style="color: #1889FF;">Liivro</span>
-                <h2 class="product-title">PiSau</h2>
-                <p class="product-description">A saúde, do vermelho para o azul.</p>
-                <p class="product-price">R$ 108</p>
+        <section class="categoria-bloco cat-saude">
+            <h2>Saúde</h2>
+            <div class="item-loja">
+                <div class="item-info">
+                    <span class="item-nome">Netshoes / Olympikus</span>
+                    <span class="item-desc">O vigor do corpo em movimento.</span>
+                </div>
+                <a href="#" class="btn-link">Acessar ›</a>
             </div>
-            <a href="https://pay.kiwify.com.br/giILQS6" class="buy-button">Comprar</a>
-        </div>
+            <div class="item-loja">
+                <div class="item-info">
+                    <span class="item-nome">Cobasi</span>
+                    <span class="item-desc">Cuidado com a vida doméstica.</span>
+                </div>
+                <a href="#" class="btn-link">Acessar ›</a>
+            </div>
+        </section>
 
-        <div class="product-card">
-            <div>
-                <span class="liivro-tag" style="color: #FF7218;">Liivro</span>
-                <h2 class="product-title">PiSofia</h2>
-                <p class="product-description">Qual é a sua filosofia?</p>
-                <p class="product-price">R$ 108</p>
+        <section class="categoria-bloco cat-filosofia">
+            <h2>Filosofia</h2>
+            <div class="item-loja">
+                <div class="item-info">
+                    <span class="item-nome">Surfshark</span>
+                    <span class="item-desc">Privacidade e fronteiras digitais.</span>
+                </div>
+                <a href="#" class="btn-link">Acessar ›</a>
             </div>
-            <a href="https://pay.kiwify.com.br/CqPNhIl" class="buy-button">Comprar</a>
-        </div>
+            <div class="item-loja">
+                <div class="item-info">
+                    <span class="item-nome">Kindle Unlimited / Mercado Livre</span>
+                    <span class="item-desc">Acesso universal ao conhecimento e objetos.</span>
+                </div>
+                <a href="#" class="btn-link">Acessar ›</a>
+            </div>
+        </section>
 
-        <div class="product-card">
-            <div>
-                <span class="liivro-tag" style="color: #FEEF18;">Liivro</span>
-                <h2 class="product-title">PiLin</h2>
-                <p class="product-description">There is not just one language.</p>
-                <p class="product-price">R$ 88</p>
+        <section class="categoria-bloco cat-lingua">
+            <h2>Língua</h2>
+            <div class="item-loja">
+                <div class="item-info">
+                    <span class="item-nome">YouTube</span>
+                    <span class="item-desc">A oratória e a imagem contemporânea.</span>
+                </div>
+                <a href="#" class="btn-link">Acessar ›</a>
             </div>
-            <a href="https://pay.kiwify.com.br/9poKbxG" class="buy-button">Comprar</a>
-        </div>
+        </section>
 
-        <div class="product-card">
-            <div>
-                <span class="liivro-tag" style="color: #ae18fe;">Liivro</span>
-                <h2 class="product-title">Pistilo</h2>
-                <p class="product-description">Indo com estilo.</p>
-                <p class="product-price">R$ 78</p>
+        <section class="categoria-bloco cat-estilo">
+            <h2>Estilo</h2>
+            <div class="item-loja">
+                <div class="item-info">
+                    <span class="item-nome">Shein / Beleza na Web</span>
+                    <span class="item-desc">Estética acessível e cuidados pessoais.</span>
+                </div>
+                <a href="#" class="btn-link">Acessar ›</a>
             </div>
-            <a href="https://pay.kiwify.com.br/qh7pDSq" class="buy-button">Comprar</a>
-        </div>
+            <div class="item-loja">
+                <div class="item-info">
+                    <span class="item-nome">Vivara / Monte Carlo</span>
+                    <span class="item-desc">O brilho do detalhe e da permanência.</span>
+                </div>
+                <a href="#" class="btn-link">Acessar ›</a>
+            </div>
+        </section>
 
-        <div class="product-card">
-            <div>
-                <span class="liivro-tag" style="color: #FF189C;">Liivro</span>
-                <h2 class="product-title">PiMor</h2>
-                <p class="product-description">Ah, o amor!</p>
-                <p class="product-price">R$ 98</p>
+        <section class="categoria-bloco cat-amor">
+            <h2>Amor</h2>
+            <div class="item-loja">
+                <div class="item-info">
+                    <span class="item-nome">Miess / Panty Nova</span>
+                    <span class="item-desc">A exploração do desejo e da intimidade.</span>
+                </div>
+                <a href="#" class="btn-link">Acessar ›</a>
             </div>
-            <a href="https://pay.kiwify.com.br/yfcSxNI" class="buy-button">Comprar</a>
-        </div>
+        </section>
 
     </div>
 
-    <div class="contact-area">
-    <a href="https://t.me/dinnunes" class="telegram-button">Dúvidas? ›</a>
-</div>
-    
     <footer>
-        <p>Pitore © 2026 por Din está licenciado sob CC BY 4.0</p>
+        <p>Pitore © 2026 • Curadoria de Afiliados</p>
     </footer>
 
 </body>
