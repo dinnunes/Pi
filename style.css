@@ -158,11 +158,16 @@ footer {
     transition: all 0.3s;
 }
 
-.telegram-button:hover {
-    opacity: 1;
-    border-color: #f7f5f5;
-    background-color: #f7f5f5;
-    color: #111111;
+.contact-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.contact-link:hover {
+    border-color: #ffffff; /* Cria uma linha sutil ao passar o mouse */
 }
 
 /* Layout Geral do Sobre */
